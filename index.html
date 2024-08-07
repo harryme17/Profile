@@ -3,139 +3,329 @@
 
 <head>
   <meta charset="utf-8">
-  <title>⚒⚒Harshal's personal website</title>
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚒⚒ Harshal's Personal Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-color: powderblue;
-      color: #005082;
+      background-color: #f0f4f8;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    header {
+      background-color: #007aff;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      font-family: 'Montserrat', sans-serif;
     }
 
     hr {
-      background-color: none;
-      border-style: dotted none none none;
-      height: 0px;
-      width: 10%;
-      border-color: grey;
-      border-width: 5px;
-
+      border: none;
+      border-top: 2px solid #ddd;
+      width: 80%;
+      margin: 2em auto;
     }
 
-    img {
-      width: 100%;
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    table {
-      width: 100%;
+    .profile-info {
+      padding: 2em;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      text-align: left;
     }
 
-    td {
+    .profile-info img {
+      max-width: 120px;
+      height: auto;
+      margin-right: 2em;
+      border-radius: 20px;
+    }
+
+    .profile-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .profile-info ul li {
+      margin: 0.5em 0;
+    }
+
+    .profile-info h1 {
+      margin: 0;
+      color: #007aff;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .profile-info b {
+      color: #ff3b30;
+    }
+
+    .content, .education, .activities {
+      padding: 2em;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .content p, .education ul li, .activities ol li {
+      line-height: 1.6;
+      font-size: 1em;
+    }
+
+    .content h2 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #007aff;
+    }
+
+    .education ul, .activities ol {
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .education ul li, .activities ol li {
+      margin: 0.5em 0;
+      display: flex;
       align-items: center;
     }
 
-    h1 {
-      width: 100%;
-      color: #522d5b;
+    .education ul li::before, .activities ol li::before {
+      content: "\f058";
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: #007aff;
+      margin-right: 10px;
+      display: inline-block;
+      width: 1.2em;
     }
 
-    b {
-      color: #844685;
+    .education h3, .activities h3, .content h3 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #007aff;
     }
 
-    td {
-      align-items: center;
+    .education a {
+      color: #007aff;
+      text-decoration: none;
+    }
+
+    .education a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      text-align: center;
+      margin-top: 2em;
+      font-family: 'Roboto', sans-serif;
+      padding: 2em;
+      background: rgba(0, 122, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px; /* Add space below the footer */
+    }
+
+    .footer-links p {
+      font-size: 1.2em;
+      color: #007aff;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 1em 0 0;
+    }
+
+    .footer-links ul li {
+      margin: 0 1em;
+    }
+
+    .footer-links ul li a {
+      color: #007aff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .footer-links ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 1200px) {
+      .container {
+        width: 95%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-header img {
+        max-width: 100px;
+      }
+
+      .profile-header h1 {
+        font-size: 1.5em;
+      }
+
+      .container {
+        width: 95%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding: 0 1em;
+      }
+
+      .profile-header {
+        padding: 1em;
+      }
+
+      .profile-header img {
+        max-width: 80px;
+      }
+
+      .profile-header h1 {
+        font-size: 1.2em;
+      }
+
+      .content, .education, .activities {
+        padding: 1em;
+      }
+
+      .card {
+        border-radius: 10px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .profile-header {
+        padding: 0.5em;
+      }
+
+      .profile-header img {
+        max-width: 60px;
+      }
+
+      .profile-header h1 {
+        font-size: 1em;
+      }
+
+      .content, .education, .activities {
+        padding: 0.5em;
+      }
     }
   </style>
-
 </head>
 
-
 <body>
-  <table align="center" cellspacing="50">
-    <tr>
-      <td><img src="https://i.gifer.com/5dKW.gif" alt="Harshal Profile Photo"></td>
-      <td>
-        <center>
-          <h1>Welcome to my Profile</h1>
-        </center>
-      </td>
-      <td> <img src="https://i.imgur.com/LrCsH0e.gif" alt="" style="float: right;"></td>
+  <div class="container">
 
-    </tr>
-  </table>
-  <hr>
-  <table cellspacing="40" size="5">
-    <tr>
-      <td><img src="https://d1fdloi71mui9q.cloudfront.net/y1sCaiwT9GRFT13feznH_f8Z9339wwzfFQQoS" alt="Harshal's profile image"></td>
-      <td>
-        <ul align="center">
+    <!-- <div class="profile-header">
+      <img class="left-gif" src="https://i.gifer.com/5dKW.gif" alt="Left Decoration">
+      <h1>Harshal Menge</h1>
+      <img class="right-gif" src="https://i.imgur.com/LrCsH0e.gif" alt="Right Decoration">
+    </div> -->
 
-          <li>
+    <hr>
 
+    <div class="profile-info">
+      <!-- <img src="https://d1fdloi71mui9q.cloudfront.net/y1sCaiwT9GRFT13feznH_f8Z9339wwzfFQQoS" alt="Harshal's Profile Image"> -->
+      <ul>
+        <li><h1>Harshal Menge</h1></li>
+        <li><p><em>Student at <strong>Vidyalankar Polytechnic, Wadala (E)</strong></em></p></li>
+        <li><p><b>BEGINNER</b> at HTML</p></li>
+      </ul>
+    </div>
 
-            <h1>Harshal Menge</h1>
-          </li>
+    <hr>
 
-          <li>
-            <p><em>Student at <strong>Vidyalankar polytechnic,Wadala(E)</strong></em></p>
-          </li>
-          <li>
-            <p><b>
-                &#128162; BEGINNER</b> at html</p>
-          </li>
+    <div class="content">
+      <h3><b>About Me</b></h3><br>
+      <p>Hi, I am Harshal Menge, a student at <strong>Vidyalankar Polytechnic.</strong></p>
+      <p>I'm learning web development, and this site is created using just pure HTML & internal CSS without using the division tag.</p>
+    </div>
+
+    <hr>
+
+    <div class="education">
+      <h3><b>Education Section</b></h3>
+      <ul>
+        <li>SSC done from <a href="http://www.vpms.in/WebPages/Index.html" target="_blank">M B High School</a></li>
+        <li>Doing Diploma at <a href="https://vidyalankar.com/vidyalankar-polytechnic/" target="_blank">Vidyalankar Polytechnic</a></li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="activities">
+      <h3><b>Curricular Activities Done:</b></h3>
+      <ol>
+        <li>Dances (Military, Horror, etc.)</li>
+        <li>Dramas (Sanskrit, Marathi)</li>
+        <li>Street Plays</li>
+        <li>Cycle Repairing</li>
+        <li>Volleyball</li>
+        <li>Tabla Basics</li>
+        <li>Dhol Vadak at PARLESWAR DTP</li>
+      </ol>
+    </div>
+
+    <hr>
+
+    <footer>
+      <div class="footer-links">
+        <p>
+          Want to explore more about me and my interests? Feel free to click on the links below to discover more about my hobbies and other aspects of my work. I have created some extra pages that provide additional insights into my passions and the projects I’m working on. Don’t hesitate to reach out through the contact form if you have any questions or if you would like to discuss potential collaborations!
+        </p>
+        <ul>
+          <li><a href="Hobbies.html" target="_blank">My Hobbies</a></li>
+          <li><a href="Form.html">Just a Form</a></li>
         </ul>
-        <br />
-      </td>
+      </div>
+    </footer>
+  </div>
 
-    </tr>
-
-
-  </table>
-  <hr>
-  <p>Hi, I am Harshal Menge, Student at <strong>Vidyalankar polytechnic.</strong></p>
-  <p>I'm leanrning web development,this is just a site which made by
-    just pure html & interal CSS with zero usage of division tag</p>
-  <hr>
-  <p>
-    <h3>What is <b>Lorem Ipsum?</b></h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-
-  </p>
-  <center>
-    <h3><u><b>Education Section</b></u></h3>
-  </center>
-  <p>
-  <ul>
-    <li>SSC done from <a href="http://www.vpms.in/WebPages/Index.html" target="_blank"> M B High School</a></li>
-    <li>Doing Diploma at <a href="https://vidyalankar.com/vidyalankar-polytechnic/">Vidyalankar polytechnic</a></li>
-  </ul>
-  <hr>
-  <center>
-    <h3><b>Curricular activities done:</b></h3>
-  </center>
-  <ol>
-    <li>Dances(Milatary,Horror,etc.)</li>
-    <li>Drama's (Sanskrit,Marathi)</li>
-    <li>Street plays</li>
-    <li>Cycle Repairing</li>
-    <li>Volleyball</li>
-    <li>Tabla Basics</li>
-    <li>Dhol Vadak at PARLESWAR DTP</li>
-  </ol>
-  <hr>
-  </p>
-  <b>To know more about me:-</b>
-
-  <ul>
-    <li><a href="Hobbies.html" target="_blank">My Hobbies</a></li>
-    <li><a href="Form.html">Just a form..</a></li>
-  </ul><br / />
-  <hr />
-  <br />
-
+  <script src="https://unpkg.com/@splinetool/viewer@0.9.310/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/your-spline-url/scene.splinecode" style="width:100%; height:400px;"></spline-viewer>
 </body>
 
 </html>
