@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harryme.17 Profile</title>
+  <title>⚒⚒ Harshal's Personal Website</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
       padding: 0;
       padding-top: 20px;
       padding-bottom: 20px;
-      background-image: 
-        linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+      background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
       background-size: 40px 40px;
     }
 
@@ -82,38 +82,44 @@
       color: #ff3b30;
     }
 
-    .content, .education, .activities {
+    .content, .education, .activities, .skills, .projects, .internships {
       padding: 2em;
       background: white;
       border-radius: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       margin: 20px 0;
       text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .content p, .education ul li, .activities ol li {
+    .content:hover, .education:hover, .activities:hover, .skills:hover, .projects:hover, .internships:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .content p, .education ul li, .activities ol li, .skills ul li, .projects ul li, .internships ul li {
       line-height: 1.6;
       font-size: 1em;
     }
 
-    .content h2 {
+    .content h2, .education h2, .activities h2, .skills h2, .projects h2, .internships h2 {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       color: #007aff;
     }
 
-    .education ul, .activities ol {
+    .education ul, .activities ol, .skills ul, .projects ul, .internships ul {
       padding-left: 0;
       margin: 0;
     }
 
-    .education ul li, .activities ol li {
+    .education ul li, .activities ol li, .skills ul li, .projects ul li, .internships ul li {
       margin: 0.5em 0;
       display: flex;
       align-items: center;
     }
 
-    .education ul li::before, .activities ol li::before {
+    .education ul li::before, .activities ol li::before, .skills ul li::before, .projects ul li::before, .internships ul li::before {
       content: "\f058";
       font-family: 'Font Awesome 6 Free';
       font-weight: 900;
@@ -121,21 +127,6 @@
       margin-right: 10px;
       display: inline-block;
       width: 1.2em;
-    }
-
-    .education h3, .activities h3, .content h3 {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      color: #007aff;
-    }
-
-    .education a {
-      color: #007aff;
-      text-decoration: none;
-    }
-
-    .education a:hover {
-      text-decoration: underline;
     }
 
     .footer-links {
@@ -146,7 +137,8 @@
       background: rgba(0, 122, 255, 0.1);
       border-radius: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: 40px; /* Add space below the footer */
+      margin-bottom: 40px;
+      /* Add space below the footer */
     }
 
     .footer-links p {
@@ -182,6 +174,12 @@
       border: none;
       border-radius: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 1200px) {
@@ -259,45 +257,81 @@
 <body>
   <div class="container">
 
-    <!-- <div class="profile-header">
-      <img class="left-gif" src="https://i.gifer.com/5dKW.gif" alt="Left Decoration">
+    <!-- <header>
       <h1>Harshal Menge</h1>
-      <img class="right-gif" src="https://i.imgur.com/LrCsH0e.gif" alt="Right Decoration">
-    </div> -->
+    </header> -->
 
     <hr>
 
-    <div class="profile-info">
-      <!-- <img src="https://d1fdloi71mui9q.cloudfront.net/y1sCaiwT9GRFT13feznH_f8Z9339wwzfFQQoS" alt="Harshal's Profile Image"> -->
+    <div class="profile-info card">
       <ul>
-        <li><h1>Harshal Menge</h1></li>
-        <li><p><em>Student at <strong>Vidyalankar Polytechnic, Wadala (E)</strong></em></p></li>
-        <li><p><b>BEGINNER</b> at HTML</p></li>
+        <li>
+          <h1>Harshal Menge</h1>
+        </li>
+        <li>
+          <p><em>Student at <strong>Smt. Indira Gandhi College of Engineering</strong></em></p>
+        </li>
+        <li>
+          <p><b>Proficient</b> in HTML, CSS, JavaScript, React, Angular, Java, Python, Django</p>
+        </li>
       </ul>
     </div>
 
     <hr>
 
-    <div class="content">
-      <h3><b>About Me</b></h3><br>
-      <p>Hi, I am Harshal Menge, a student at <strong>Vidyalankar Polytechnic.</strong></p>
-      <p>I'm learning web development, and this site is created using just pure HTML & internal CSS without using the division tag.</p>
+    <div class="content card">
+      <h2>About Me</h2><br>
+      <p>Hi, I am Harshal Menge, a student at <strong>Smt. Indira Gandhi College of Engineering.</strong> I'm passionate about web development and AI, and I love to work on creative projects that combine technology and art.</p>
     </div>
 
     <hr>
 
-    <div class="education">
-      <h3><b>Education Section</b></h3>
+    <div class="education card">
+      <h2>Education</h2><br>
       <ul>
-        <li>SSC done from <a href="http://www.vpms.in/WebPages/Index.html" target="_blank">M B High School</a></li>
-        <li>Doing Diploma at <a href="https://vidyalankar.com/vidyalankar-polytechnic/" target="_blank">Vidyalankar Polytechnic</a></li>
+        <li>SSC from <a href="http://www.vpms.in/WebPages/Index.html" target="_blank"> M B High School</a></li>
+        <li>Diploma in Computer Engineering from <a href="https://vidyalankar.edu.in" target="_blank">Vidyalankar Polytechnic</a></li>
+        <li>Pursuing Bachelor of Computer Engineering at <a href="https://sigce.edu.in" target="_blank">Smt. Indira Gandhi College of Engineering</a></li>
       </ul>
     </div>
 
     <hr>
 
-    <div class="activities">
-      <h3><b>Curricular Activities Done:</b></h3>
+    <div class="skills card">
+      <h2>Skills</h2><br>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Angular</li>
+        <li>Java, Python, Django</li>
+        <li>Database Management (insert, update, delete operations)</li>
+        <li>Video Editing (corporate, cinematic, animated)</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="projects card">
+      <h2>Projects</h2><br>
+      <ul>
+        <li>Website Builder with UI Enhancements using various frameworks, including 3D and 2D frameworks like Spline</li>
+        <li>Professional HTML Email Templates similar to those from companies like Zomato, Swiggy, Amazon, and Google</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="internships card">
+      <h2>Internships</h2><br>
+      <ul>
+        <li>Orane Intelli Solutions - Learned about the Ionic Framework</li>
+        <li>RKDEMY - Gained experience in educational technology</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="activities card">
+      <h2>Extracurricular Activities</h2><br>
       <ol>
         <li>Dances (Military, Horror, etc.)</li>
         <li>Dramas (Sanskrit, Marathi)</li>
@@ -312,7 +346,7 @@
     <hr>
 
     <footer>
-      <div class="footer-links">
+      <div class="footer-links card">
         <p>
           Want to explore more about me and my interests? Feel free to click on the links below to discover more about my hobbies and other aspects of my work. I have created some extra pages that provide additional insights into my passions and the projects I’m working on. Don’t hesitate to reach out through the contact form if you have any questions or if you would like to discuss potential collaborations!
         </p>
