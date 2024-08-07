@@ -4,107 +4,201 @@
 <head>
   <meta charset="utf-8">
   <title>My Hobbies</title>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
-    img {
-    width:100%;
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Roboto', sans-serif;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+      margin: 0;
+      padding: 0;
     }
-    hr {
-      background-color: none;
-      border-style: dotted none none none;
-      height: 0px;
-      width: 10%;
-      border-color: grey;
-      border-width: 5px;
-    }
-    table{width: 100%;}
-  </style>
 
+    .container {
+      margin-top: 20px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      border-radius: 20px 20px 0 0;
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 1em;
+      color: #555;
+    }
+
+    .footer-links {
+      margin-top: 20px;
+      margin-bottom: 40px; /* Added margin at the bottom */
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 122, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-links p {
+      font-size: 1.2em;
+      color: #007aff;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 1em 0 0;
+    }
+
+    .footer-links ul li {
+      margin: 0 1em;
+    }
+
+    .footer-links ul li a {
+      color: #007aff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .footer-links ul li a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 2em;
+      color: #007aff;
+    }
+
+    p {
+      font-size: 1em;
+      color: #555;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px dotted #ddd;
+      width: 10%;
+      margin: 20px auto;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 
-<body bgcolor="PeachPuff">
-  <center>
+<body>
+  <div class="container">
 
-    <table cellspacing="20px">
-      <tr>
-        <td>
-          <table>
+    <!-- <h1>My Hobbies</h1> -->
+    
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zLDquxo3CO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Dhol Playing</h5>
+            <p class="card-text">Playing dhol is one of my favorite hobbies. Watch the video to see it in action.</p>
+          </div>
+        </div>
+      </div>
 
-            <tr>
-              <td>
-                <img src="https://images.loksatta.com/2017/03/dhol-tasha-pathak-300x200.jpg?w=300" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2-zB95HeWG_HCohbJ9E9r6mpUsgIkMouvxfgnMroocutttGJE&usqp=CAU" alt="">
-              </td>
-            </tr>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2-zB95HeWG_HCohbJ9E9r6mpUsgIkMouvxfgnMroocutttGJE&usqp=CAU" class="card-img-top" alt="Dancing">
+          <div class="card-body">
+            <h5 class="card-title">Dancing</h5>
+            <p class="card-text">Dancing is another passion of mine. You can watch my performances <a href="https://youtu.be/OWCDJnnxOSY">here</a>.</p>
+          </div>
+        </div>
+      </div>
 
-          </table>
-        </td>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/11646275/pexels-photo-11646275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Photography">
+          <div class="card-body">
+            <h5 class="card-title">Photography</h5>
+            <p class="card-text">I enjoy capturing moments through photography. Check out this stunning photo <a href="https://www.pexels.com/photo/nature-s-bulb-sun-11646275/" target="_blank">here</a>.</p>
+          </div>
+        </div>
+      </div>
 
-        <td><h1 align="center">Hobbies</h1> </td>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZSXmUG1L3-45wCRBfvMTFM_vDSTSE4EYWEUuNO2nYfwk_V-zf&usqp=CAU" class="card-img-top" alt="Sketching">
+          <div class="card-body">
+            <h5 class="card-title">Pencil Sketching</h5>
+            <p class="card-text">Sketching is a relaxing hobby. Check out some of my work <a href="https://www.youtube.com/watch?v=bVvnyNmdrIQ">here</a>.</p>
+          </div>
+        </div>
+      </div>
 
-        <td>
-          <table>
+    </div>
 
-            <tr>
-              <td>
-                <img src="https://miami.citymomsblog.com/wp-content/uploads/2018/07/boy-camera-child-129426-300x200.jpg" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZSXmUG1L3-45wCRBfvMTFM_vDSTSE4EYWEUuNO2nYfwk_V-zf&usqp=CAU" alt="">
-              </td>
-            </tr>
+    <hr>
 
-          </table>
-        </td>
+    <div class="footer-links">
+      <p>
+        Want to explore more about me and my interests? Feel free to click on the links below to discover more about my hobbies and other aspects of my work. I have created some extra pages that provide additional insights into my passions and the projects I’m working on. Don’t hesitate to reach out through the contact form if you have any questions or if you would like to discuss potential collaborations!
+      </p>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home Page</a></li>
+        <li><a href="C:\Users\Asus\Desktop\TEXT"><i class="fas fa-map-marker-alt"></i> Traveling</a></li>
+        <li><a href="https://www.google.com"><i class="fas fa-search"></i> Interesting Things</a></li>
+      </ul>
+    </div>
+  </div>
 
-      </tr>
-    </table>
-
-  </center>
-
-  <p align="right">
-    <h7><a href="index.html">Click here to home page</a></h7>
-  </p>
-  </left>
-  <hr>
-  <p>Hobbies are a part of a persons peronality which describes more about his social life and his likes and dislikes.
-    Also it helps to nurture mental peace while performing these hobbies.So as you now know that hobbies are a important
-    part in bringing up the personality of a human being,let's take a look to my hobbies..</p><br>
-  <hr>
-
-  <p>
-  <h2><b>My HOBBIES..</b></h2>
-  </p>
-  <ul>
-    <li>Playing<a href="https://youtu.be/skrsecrVmCs"> dhol </a> is my favourite Hobby</li>
-    <li><a href="https://youtu.be/OWCDJnnxOSY">Dancing </a></li>
-    <li>Listening to <a href="https://www.youtube.com/watch?v=aJOTlE1K90k&list=PLc37wiPAiVyJpQv5deS4-9rJUDyYuIFHY">songs.</a></li>
-    <ol>
-      <li><a href="https://www.youtube.com/user/NucleyaProductions">EDM</a></li>
-      <li><a href="https://youtu.be/e25zWcOnrh8">Marathi songs</a></li>
-      <li><a href="https://www.youtube.com/watch?v=ikeBSMNoVAk&list=PLGpLqaMxppFp2FUQJnJeUT7FZj1wLcJHA">AJAY-ATUL</a> melody</li>
-      <li><a href="https://www.youtube.com/watch?v=J9sOeanbdUE&t=675s">Arijit Songs</a></li>
-      <li><a href="https://www.youtube.com/watch?v=hNAgYBar1Ak">Ganpati</a> bappa Songs</li>
-      <li><a href="https://www.youtube.com/watch?v=XOOlRkGklHE">Quawali's</a></li>
-      <li><a href="https://www.youtube.com/watch?v=Aszfvp23Eyg">Powada's</a></li>
-      <li><a href="https://www.youtube.com/watch?v=d9cXYh8zTpU">Divine </a></li>
-      <li><a href="https://www.youtube.com/watch?v=jSDL_nW7ryY">English silent songs</a></li>
-    </ol>
-    <li><a href="https://www.youtube.com/watch?v=bVvnyNmdrIQ">Pencil Sketching</a></li>
-    <li><a href="https://www.youtube.com/watch?v=V7z7BAZdt2M">Photography</a></li>
-    <li><a href="https://www.youtube.com/watch?v=JUnDUQEjnJs">Watching movies</a></li>
-    <li><a href="C:\Users\Asus\Desktop\TEXT">Travelling</a> to different places</li>
-    <li><a href="google.com">Searching about interesting</a> things on interet</li>
-
-  </ul>
-  <p align="right">
-    <h7><a href="index.html">Click here to home page</a></h7>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
